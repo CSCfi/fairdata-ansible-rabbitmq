@@ -1,0 +1,12 @@
+---
+- name: Include service installation tasks
+  include_tasks: "rabbitmq-service.yml"
+  tags: rabbitmq-service
+
+- name: Include service configuration tasks
+  include_tasks: "rabbitmq-configure.yml"
+  tags: rabbitmq-config
+
+- name: Include service user management tasks
+  include_tasks: "rabbitmq-users.yml"
+  tags: rabbitmq-users

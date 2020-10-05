@@ -1,0 +1,24 @@
+---
+- name: Ensure RabbitMQ vhosts exist
+  rabbitmq_vhost:
+    node: "{{ nodename }}"
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ vhosts }}"
+  become: yes
+  notify:
+  - Restart RabbitMQ
+  tags: rabbitmq-users
+
+- name: Ensure RabbitMQ users exist with correct permissions
+  rabbitmq_user:
+    node: "{{ nodename }}"
+    user: "{{ item.user }}"
+    password: "{{ item.pass }}"
+    permissions: "{{ item.permissions }}"
+    state: present
+  with_items: "{{ users }}"
+  become: yes
+  notify:
+  - Restart RabbitMQ
+  tags: rabbitmq-users
