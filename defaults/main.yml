@@ -1,0 +1,13 @@
+---
+nodename: "rabbitmq"
+
+vhosts: [test]
+
+users:
+- user: test
+  pass: test
+  permissions:
+  - vhost: test
+    configure_priv: .*
+    read_priv: .*
+    write_priv: .*
