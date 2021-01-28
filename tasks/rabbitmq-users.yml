@@ -18,6 +18,7 @@
     permissions: "{{ item.permissions }}"
     state: present
   with_items: "{{ users }}"
+  no_log: True
   become: yes
   notify:
   - Restart RabbitMQ
