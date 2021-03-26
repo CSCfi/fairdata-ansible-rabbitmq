@@ -1,13 +1,21 @@
 ---
+# Miscellaneous variables
+# ~~~~~~~~~~~~~~~~~~~~~~~
 nodename: "rabbitmq"
 
-vhosts: [test]
+# Users and vhosts
+# ~~~~~~~~~~~~~~~~
 
-users:
-- user: test
-  pass: test
-  permissions:
-  - vhost: test
-    configure_priv: .*
-    read_priv: .*
-    write_priv: .*
+vhosts: []
+# vhosts:
+#   - vhost1
+#   - vhost2
+
+users: []
+# - user: test
+#   pass: test
+#   permissions:
+#   - vhost: test
+#     configure_priv: .*
+#     read_priv: .*
+#     write_priv: .*
