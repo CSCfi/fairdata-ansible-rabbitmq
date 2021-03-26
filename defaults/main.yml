@@ -3,6 +3,11 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~
 nodename: "rabbitmq"
 
+enabled_plugins: []
+# Example:
+# enabled_plugins:
+#   - rabbitmq_management
+
 # Users and vhosts
 # ~~~~~~~~~~~~~~~~
 
