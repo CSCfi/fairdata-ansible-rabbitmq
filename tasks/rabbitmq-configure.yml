@@ -27,5 +27,6 @@
     dest: '/etc/rabbitmq/enabled_plugins'
     mode: 0644
   become: 'yes'
+  when: enabled_plugins | length > 0
   notify: Restart RabbitMQ
   tags: rabbitmq-config
