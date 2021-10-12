@@ -1,13 +1,26 @@
 ---
+# Miscellaneous variables
+# ~~~~~~~~~~~~~~~~~~~~~~~
 nodename: "rabbitmq"
 
-vhosts: [test]
+enabled_plugins: []
+# Example:
+# enabled_plugins:
+#   - rabbitmq_management
 
-users:
-- user: test
-  pass: test
-  permissions:
-  - vhost: test
-    configure_priv: .*
-    read_priv: .*
-    write_priv: .*
+# Users and vhosts
+# ~~~~~~~~~~~~~~~~
+
+vhosts: []
+# vhosts:
+#   - vhost1
+#   - vhost2
+
+users: []
+# - user: test
+#   pass: test
+#   permissions:
+#   - vhost: test
+#     configure_priv: .*
+#     read_priv: .*
+#     write_priv: .*
