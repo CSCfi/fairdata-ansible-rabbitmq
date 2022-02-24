@@ -3,6 +3,7 @@
   - name: Gather the package facts
     ansible.builtin.package_facts:
       manager: auto
+    become: yes
 
   - name: Add packagecloud GPG key.
     rpm_key:
