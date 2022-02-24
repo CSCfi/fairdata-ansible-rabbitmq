@@ -1,4 +1,14 @@
 ---
+- name: Ensure sudo is installed
+  yum:
+    name: sudo
+    state: present
+  tags: download-sudo
+
+- name: install EPEL repo
+  become: yes
+  yum: name=epel-release state=present
+
 - name: Include service installation tasks
   include_tasks: "rabbitmq-service.yml"
   tags: rabbitmq-service
