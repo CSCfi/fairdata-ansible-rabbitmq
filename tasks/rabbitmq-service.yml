@@ -23,8 +23,8 @@
     yum:
       name: "/tmp/{{ rabbitmq_rpm }}"
       state: "present"
-  become: yes
-  when: "'rabbitmq-server' not in ansible_facts.packages"
+    become: yes
+    when: "'rabbitmq-server' not in ansible_facts.packages"
 
 - name: Ensure RabbitMQ is started
   service:
