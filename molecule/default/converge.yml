@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include fairdata-ansible-rabbitmq"
+      include_role:
+        name: "fairdata-ansible-rabbitmq"
